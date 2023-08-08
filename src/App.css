@@ -131,16 +131,24 @@ form button:hover {
   border-radius: 50px;
 }
 
+/* Updated select styles for responsiveness */
+.select {
+  position: relative;
+  width: 100%;
+  max-width: 200px; /* Adjust the maximum width as needed */
+  margin: 1rem auto; /* Center the select horizontally */
+}
+
 select {
   color: rgb(17, 17, 16);
   font-size: 0.5cm;
-  width: 10rem;
-  height: 3.05rem;
+  width: 100%;
+  padding: 0.8rem; /* Adjust padding for better mobile touch interaction */
   cursor: pointer;
-  padding: 1rem;
   appearance: none;
   outline: none;
-  border: none;
+  border: 2px solid rgb(169, 169, 169);
+  border-radius: 0.5rem;
   background: white;
 }
 
@@ -148,9 +156,9 @@ select {
   content: "\25BC";
   position: absolute;
   background: rgb(169, 169, 169);
-  top: 0;
-  right: 0;
-  padding: 1rem;
+  top: 0.8rem; /* Adjust vertical position for the arrow */
+  right: 0.8rem; /* Adjust horizontal position for the arrow */
+  padding: 0.4rem; /* Adjust padding for the arrow hit area */
   pointer-events: none;
   transition: all 0.3s ease;
 }
@@ -159,6 +167,7 @@ select {
   background: white;
   color: rgb(23, 1, 89);
 }
+
 
 /* Edit modal styles */
 .modal-content {
