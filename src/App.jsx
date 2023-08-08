@@ -82,18 +82,20 @@ const TodoList = () => {
       setTodos(storedTodos);
     }
   };
+
   return (
     <div className="App">
       <header>
         <h2>TO DO LIST</h2>
       </header>
 
-      <form onSubmit={addTodo}>
+      <form onSubmit={addTodo} className="form">
         <input
           type="text"
           className="todo-input"
           value={todoInput}
           onChange={(e) => setTodoInput(e.target.value)}
+          placeholder="Add a new task..."
         />
         <button className="todo-button" type="submit">
           <FaPlusCircle className="icon" />
@@ -149,7 +151,7 @@ const TodoList = () => {
                 autoComplete="off"
                 name="text"
                 className="input"
-                placeholder="Username"
+                placeholder="Edit your task..."
                 value={editedTodoText}
                 onChange={(e) => setEditedTodoText(e.target.value)}
               />
@@ -176,4 +178,5 @@ const TodoList = () => {
     </div>
   );
 };
+
 export default TodoList;
